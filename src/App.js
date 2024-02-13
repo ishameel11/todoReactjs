@@ -36,12 +36,14 @@ function App() {
 
   return (
     <div className="flex bg-[#E5EDC4] justify-center h-screen items-center">
-      <div className="bg-[#934662] pt-10 pb-16 px-16 border-none rounded-full flex flex-col justify-center items-center">
-        <h1 className="text-[#E5EDC4] text-4xl font-bold">My To-do List</h1>
+      <div className="bg-[#934662] pt-10 pb-16 sm:px-36 px-2 border-none rounded-full flex flex-col justify-center items-center">
+        <h1 className="text-[#E5EDC4] sm:text-4xl text-xl font-bold">
+          My To-do List
+        </h1>
         <div className="">
-          <div className="flex my-4">
+          <div className="flex my-4 px-4">
             <input
-              className="border-none rounded-l-full py-2 px-10 font-semibold"
+              className="border-none rounded-l-full py-2 sm:px-10 px-4 font-semibold"
               type="text"
               placeholder="What is the task today?"
               value={inputValue}
@@ -58,7 +60,7 @@ function App() {
           <div className="flex justify-center items-center">
             <ul>
               {todos.map((todo, index) => (
-                <div className="justify-between flex gap-48 items-center">
+                <div className="justify-between flex sm:gap-48 gap-32 items-center">
                   <li key={index} className="text-[#E5EDC4] font-semibold">
                     {todo}
                   </li>
